@@ -6,7 +6,7 @@ data = [
 
 (function() {
   const el = document.getElementById("myTable");
-  createSimpleTable(el, data, {
+  simpleTable.createTable(el, data, {
     "headers": ["name", "car"],
     "classList": ["table", "table-striped"]
   });
