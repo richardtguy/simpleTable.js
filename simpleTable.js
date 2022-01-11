@@ -8,7 +8,7 @@ var simpleTable = (function() {
     let t = document.createElement("table");
     let th = t.createTHead();
     let tb = t.createTBody();
-    let headers = options.headers ? options.headers : Array.from(new Set(data.reduce((prev, current)  => prev.concat(Object.keys(current)), [])));
+    let headers = options.headers ? options.headers : Array.from(new Set(data.reduce((p, c)  => p.concat(Object.keys(c)), [])));
     let headerRow = th.insertRow(0)
     headers.forEach(function(header) {
       let c = headerRow.insertCell(-1);
