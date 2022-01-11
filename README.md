@@ -13,7 +13,7 @@ const options = {
   "headers": ["name", "car"],
   "classList": ["table", "table-striped"]
 };
-createSimpleTable(el, data, options);
+simpleTable.createTable(el, data, options);
 ```
 
 ## Data structure
