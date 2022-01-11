@@ -3,7 +3,7 @@ var simpleTable = (function() {
   // private variables and functions
 
   // public variables and functions
-  simpleTable.createTable = function(element, data, options) {
+  simpleTable.createTable = function(element, data, options = {}) {
     // build table
     let t = document.createElement("table");
     let th = t.createTHead();
@@ -23,7 +23,7 @@ var simpleTable = (function() {
       };
     });
     // add classes
-    options.classList.forEach(cls => t.classList.add(cls));
+    if (options.classList) options.classList.forEach(cls => t.classList.add(cls));
     // append table to the DOM
     element.appendChild(t);
   };
